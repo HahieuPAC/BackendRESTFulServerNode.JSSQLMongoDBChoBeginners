@@ -1,4 +1,4 @@
-const {getHomePage, getSample} = require ('../controllers/homeController');
+const {getHomePage, getSample, postCreateUser, getCreatePage} = require ('../controllers/homeController');
 const express = require('express')
 const router = express.Router()
 
@@ -8,4 +8,7 @@ router.get('/', getHomePage);
 
 router.get('/sample', getSample);
 
+router.get('/create', getCreatePage);
+
+router.post('/create-user', postCreateUser);
 module.exports = router;
